@@ -1,14 +1,14 @@
-from rest_framework import serializers
-
-from user.models import CustomUser
 from car.models import Car
+from rest_framework import serializers
+from user.models import CustomUser
 
 
-# field are different in car/api/serializers
+
 class CarSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
         fields = ['id', 'name', 'manufacture_year']
+
 
 
 class ProfileSerializer(serializers.ModelSerializer):
